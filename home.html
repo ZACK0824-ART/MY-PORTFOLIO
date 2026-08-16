@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LaundryHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            Tipid<span>Sulit</span>
+        </div>
+
+        <ul id="navLinks">
+    <li><a href="home.html" class="active">Home</a></li>
+    <li><a href="price.html">Services</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="login.html">Login</a></li>
+</ul>
+
+    <!-- BURGER -->
+    <div class="burger" id="burger">
+        ☰
+    </div>
+
+    </nav>
+
+
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Fresh Clothes, Clean Life.</h1>
+
+            <p>
+                We provide washing, folding, ironing,
+                dry cleaning, and pickup & delivery services
+                with care and convenience.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="booking.html" class="btn">
+                    Book Now
+                </a>
+
+                <a href="price.html" class="btn2">
+                    Our Services
+                </a>
+
+            </div>
+
+        </div>
+
+
+       <div class="services">
+
+        <h1>Our Services</h1>
+
+        <div class="slider-container">
+
+            <button class="prev">❮</button>
+
+            <div class="slider">
+
+                <div class="slide active">
+                    <img src="washing-service.png">
+                    <h2>WASHING</h2>
+                </div>
+
+                <div class="slide">
+                    <img src="folding-service.png">
+                    <h2>FOLDING</h2>
+                </div>
+
+                <div class="slide">
+                    <img src="dry-cleaning-service.png">
+                    <h2>DRY CLEANING</h2>
+                </div>
+
+                <div class="slide">
+                    <img src="ironing-service.png">
+                    <h2>IRONING</h2>
+                </div>
+
+                <div class="slide">
+                    <img src="delivery-service.png">
+                    <h2>PICK-UP & DELIVER</h2>
+                </div>
+
+
+            </div>
+
+            <button class="next">❯</button>
+
+        </div>
+
+    </section>
+
+
+
+</div>
+
+
+
+   
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>© 2026 TipidSulit | All Rights Reserved</p>
+    </footer>
+
+
+
+<script>
+
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+function showSlide(i){
+
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+
+    slides[i].classList.add('active');
+}
+
+
+document.querySelector('.next').onclick = () => {
+
+    index = (index + 1) % slides.length;
+    showSlide(index);
+};
+
+
+document.querySelector('.prev').onclick = () => {
+
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+};
+
+
+setInterval(() => {
+
+    index = (index + 1) % slides.length;
+    showSlide(index);
+
+},3000);
+
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+</script>
+
+</body>
+</html>

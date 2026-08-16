@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Complete</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="complete-section">
+
+    <div class="complete-box">
+
+        <h1>Booking Complete! ✅</h1>
+
+        <h2>Your Booking Details</h2>
+
+        <p id="weight"></p>
+
+        <div id="services"></div>
+
+        <h3 id="total"></h3>
+
+        <a href="home.html" class="home-btn">Back to Home</a>
+
+    </div>
+
+</section>
+
+<script>
+
+let bookingData = JSON.parse(localStorage.getItem("bookingData"));
+
+document.getElementById("weight").innerHTML =
+"<strong>Weight:</strong> " + bookingData.kilo;
+
+let servicesHTML = "<strong>Services:</strong><ul>";
+
+bookingData.services.forEach(service => {
+
+    servicesHTML += "<li>" + service + "</li>";
+
+});
+
+servicesHTML += "</ul>";
+
+document.getElementById("services").innerHTML = servicesHTML;
+
+document.getElementById("total").innerHTML =
+"Total Price: ₱" + bookingData.total;
+
+</script>
+
+
+ <footer>
+        <p>© 2026 TipidSulit | All Rights Reserved</p>
+    </footer>
+    
+</body>
+</html>

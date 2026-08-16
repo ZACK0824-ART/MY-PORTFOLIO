@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        Tipid<span>Sulit</span>
+    </div>
+
+   <ul id="navLinks">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="price.html">Services</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="login.html">Login</a></li>
+</ul>
+
+    <!-- BURGER -->
+    <div class="burger" id="burger">
+        ☰
+    </div>
+
+</nav>
+
+
+<section class="about-section">
+
+    <h1>About TipidSulit</h1>
+
+    <p>
+       Welcome to TipidSulit Laundry, your trusted partner for convenient and reliable laundry services. We are dedicated to making your life easier by providing high-quality laundry care that you can book anytime.<br><br>
+
+At Tipid Sulit Laundry, we understand that your time is valuable. That’s why we offer a seamless online booking system where you can easily schedule services such as washing, folding, dry cleaning, ironing, and pick-up & delivery all in just a few clicks.<br><br>
+
+Our team is committed to handling your clothes with care and professionalism. Whether it’s your everyday wear or delicate garments, we ensure that every item is cleaned, treated, and returned fresh and neatly prepared.
+    </p>
+
+</section>
+
+
+ <footer>
+        <p>© 2026 TipidSulit | All Rights Reserved</p>
+    </footer>
+
+    <script>
+
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+</script>
+
+</body>
+</html>

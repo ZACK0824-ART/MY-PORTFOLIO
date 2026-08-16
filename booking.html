@@ -1,0 +1,397 @@
+<!----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        Tipid<span>Sulit</span>
+    </div>
+
+    <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="price.html">Services</a></li>
+    <li><a href="booking.html" class="active">Booking</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="login.html">Login</a></li>
+</ul>
+
+</nav>
+
+
+<section class="booking-section">
+
+    <div class="booking-services">
+
+        <h1>Select Services</h1>
+
+        <div class="booking-card">
+
+            <h2>Laundry Weight</h2>
+            
+            <label><input type="radio" name="kilo"> 1kg</label>
+            <label><input type="radio" name="kilo"> 2kg</label>
+            <label><input type="radio" name="kilo"> 3kg</label>
+            <label><input type="radio" name="kilo"> 4kg</label>
+            <label><input type="radio" name="kilo"> 5kg</label>
+            <label><input type="radio" name="kilo"> 6kg</label>
+            <label><input type="radio" name="kilo"> 7kg</label>
+            <label><input type="radio" name="kilo"> 8kg</label>
+            <label><input type="radio" name="kilo"> 9kg</label>
+            <label><input type="radio" name="kilo"> 10kg</label>
+            
+        </div>
+
+        <div class="booking-card">
+            <label><input type="checkbox"> Wash</label>
+        </div>
+
+        <div class="booking-card">
+            <label><input type="checkbox"> Folding</label>
+        </div>
+
+        <div class="booking-card">
+            <label><input type="checkbox"> Ironing</label>
+        </div>
+
+        <div class="booking-card">
+            <label><input type="checkbox"> Dry Cleaning</label>
+        </div>
+
+        <div class="booking-card">
+            <label><input type="checkbox"> Pickup & Delivery</label>
+        </div>
+
+        <button class="submit-btn">
+            Confirm Booking
+        </button>
+
+    </div>
+
+</section>
+
+</body>
+</html>  ---->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        Tipid<span>Sulit</span>
+    </div>
+
+   <ul id="navLinks">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="price.html">Services</a></li>
+    <li><a href="booking.html" class="active">Booking</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="login.html">Login</a></li>
+</ul>
+
+    <!-- BURGER -->
+    <div class="burger" id="burger">
+        ☰
+    </div>
+
+</nav>
+
+
+<!-- BOOKING SECTION -->
+
+<section class="booking-section">
+
+    <form class="booking-services" id="bookingForm">
+
+        <h1>Select Services</h1>
+
+        <!-- WEIGHT -->
+
+        <div class="booking-card">
+
+           <label for="weight">Choose Weight:</label>
+
+<select id="weight" name="weight">
+    <option value="">-- Select Weight --</option>
+    <option value="1">1kg</option>
+    <option value="2">2kg</option>
+    <option value="3">3kg</option>
+    <option value="4">4kg</option>
+    <option value="5">5kg</option>
+    <option value="6">6kg</option>
+    <option value="7">7kg</option>
+    <option value="8">8kg</option>
+    <option value="9">9kg</option>
+    <option value="10">10kg</option>
+</select>
+
+        </div>
+
+
+        <!-- SERVICES -->
+
+        <!-- WASH & FOLD -->
+
+<div class="booking-card">
+
+    <label>
+        <input 
+            type="checkbox" 
+            name="service" 
+            value="Wash & Fold"
+            data-price="40">
+
+        Wash & Fold - ₱40/Kg
+    </label>
+
+</div>
+
+
+
+<!-- DRY CLEANING -->
+
+<div class="booking-card">
+
+    <label>
+        <input 
+            type="checkbox" 
+            name="service" 
+            value="Dry Cleaning"
+            data-price="120">
+
+        Dry Cleaning - ₱120/Item
+    </label>
+
+    <br><br>
+
+    <label>
+        Number of Items:
+        <input 
+            type="number" 
+            id="dryItems"
+            min="0"
+            value="0">
+    </label>
+
+</div>
+
+
+
+<!-- IRONING -->
+
+<div class="booking-card">
+
+    <label>
+        <input 
+            type="checkbox" 
+            name="service" 
+            value="Ironing"
+            data-price="25">
+
+        Ironing - ₱25/Item
+    </label>
+
+    <br><br>
+
+    <label>
+        Number of Items:
+        <input 
+            type="number" 
+            id="ironItems"
+            min="0"
+            value="0">
+    </label>
+
+</div>
+
+
+
+<!-- PICKUP -->
+
+<div class="booking-card">
+
+    <label>
+        <input 
+            type="checkbox" 
+            name="service" 
+            value="Pickup & Delivery"
+            data-price="15">
+
+        Pickup & Delivery - ₱15/Kg
+    </label>
+
+</div>
+
+        <!-- BUTTON -->
+
+        <button type="submit" class="submit-btn">
+            Confirm Booking
+        </button>
+
+    </form>
+
+</section>
+
+ <footer>
+        <p>© 2026 TipidSulit | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+document.getElementById("bookingForm").addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    let kiloSelected = document.getElementById("weight").value;
+
+    let services = document.querySelectorAll('input[name="service"]:checked');
+
+    let selectedServices = [];
+
+    let total = 0;
+
+    let kilos = 0;
+
+   if(kiloSelected){
+
+    kilos = parseInt(kiloSelected);
+
+}
+
+    let dryItems = parseInt(document.getElementById("dryItems").value) || 0;
+
+    let ironItems = parseInt(document.getElementById("ironItems").value) || 0;
+
+    services.forEach(service => {
+
+        let price = Number(service.dataset.price);
+
+        let serviceTotal = 0;
+
+        // WASH & FOLD
+        if(service.value === "Wash & Fold"){
+
+            serviceTotal = price * kilos;
+
+            selectedServices.push(
+                service.value +
+                " = ₱" + price +
+                " × " + kilos + "kg = ₱" + serviceTotal
+            );
+
+        }
+
+        // PICKUP
+        else if(service.value === "Pickup & Delivery"){
+
+            serviceTotal = price * kilos;
+
+            selectedServices.push(
+                service.value +
+                " = ₱" + price +
+                " × " + kilos + "kg = ₱" + serviceTotal
+            );
+
+        }
+
+        // DRY CLEANING
+        else if(service.value === "Dry Cleaning"){
+
+            serviceTotal = price * dryItems;
+
+            selectedServices.push(
+                service.value +
+                " = ₱" + price +
+                " × " + dryItems + " items = ₱" + serviceTotal
+            );
+
+        }
+
+        // IRONING
+        else if(service.value === "Ironing"){
+
+            serviceTotal = price * ironItems;
+
+            selectedServices.push(
+                service.value +
+                " = ₱" + price +
+                " × " + ironItems + " items = ₱" + serviceTotal
+            );
+
+        }
+
+        total += serviceTotal;
+
+    });
+
+    let bookingData = {
+
+        kilo: kiloSelected ? kiloSelected + "kg" : "No weight selected",
+
+        services: selectedServices,
+
+        total: total
+
+    };
+
+    const res = await fetch('https://tipidsulit.site/api/bookings', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        weight: bookingData.kilo,
+        services: bookingData.services,
+        total: bookingData.total
+    })
+});
+
+const data = await res.json();
+
+localStorage.setItem("bookingData", JSON.stringify(bookingData));
+window.location.href = "complete.html";
+
+});
+
+
+
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+
+
+</script>
