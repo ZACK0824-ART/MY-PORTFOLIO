@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        Tipid<span>Sulit</span>
+    </div>
+   <ul id="navLinks">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="price.html" class="active">Services</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="login.html">Login</a></li>
+</ul>
+
+    <!-- BURGER -->
+    <div class="burger" id="burger">
+        ☰
+    </div>
+
+</nav>
+
+
+<!-- SERVICES -->
+
+<section class="services-page">
+
+    <h1 class="title">Our Laundry Services</h1>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+
+            <img src="wash-and-fold.png">
+
+            <h2>Wash & Fold</h2>
+
+            <p>
+                Clothes are washed, dried,
+                and neatly folded.
+            </p>
+
+            <div class="price-tag">₱40/Kg</div>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <img src="dry-cleaning-service.png">
+
+            <h2>Dry Cleaning</h2>
+
+            <p>
+                Perfect for delicate clothes
+                like suits and dresses.
+            </p>
+
+            <div class="price-tag">₱120-250/Item</div>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <img src="ironing-service.png">
+
+            <h2>Ironing</h2>
+
+            <p>
+                Professionally ironed clothes
+                ready to wear.
+            </p>
+
+            <div class="price-tag">₱25-50/Item</div>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <img src="delivery-service.png">
+
+            <h2>Pickup & Delivery</h2>
+
+            <p>
+                We collect and deliver your
+                laundry to your home.
+            </p>
+
+            <div class="price-tag">₱15/Kg</div>
+
+        </div>
+
+    </div>
+
+
+    <a href="booking.html" class="book-btn">
+        Book a Service
+    </a>
+
+</section>
+
+
+ <footer>
+        <p>© 2026 TipidSulit | All Rights Reserved</p>
+    </footer>
+
+    <script>
+
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+</script>
+
+</body>
+</html>

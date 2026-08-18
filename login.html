@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+
+    <div class="logo">
+        Tipid<span>Sulit</span>
+    </div>
+
+      <ul id="navLinks">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="price.html">Services</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="login.html" class="active">Login</a></li>
+</ul>
+
+    <!-- BURGER -->
+    <div class="burger" id="burger">
+        ☰
+    </div>
+
+</nav>
+<div class="auth-container">
+
+    <form class="auth-form">
+
+        <h1>Login</h1>
+
+        <div class="input-box">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" class="placeholder">
+        </div>
+
+        <div class="input-box">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" class="placeholder">
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Login
+        </button>
+
+        <p class="switch">
+            Don't have an account?
+            <a href="register.html">Register</a>
+        </p>
+
+    </form>
+
+</div>
+
+ <footer>
+        <p>© 2026 TipidSulit | All Rights Reserved</p>
+    </footer>
+
+<script>
+document.querySelector('.auth-form').addEventListener("submit", async function(e){
+    e.preventDefault();
+
+    const email = document.querySelector('input[type="email"]').value;
+    const password = document.querySelector('input[type="password"]').value;
+
+   const res = await fetch('https://tipidsulit.site/api/users/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+    alert(data.message);
+
+    if(data.success){
+        localStorage.setItem('userName', data.name);
+        window.location.href = 'home.html';
+    }
+});
+
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
+    
+</body>
+</html>
